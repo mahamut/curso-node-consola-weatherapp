@@ -4,7 +4,9 @@
   "description": "clima app primeros pasos node",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "inspect": "nodemon app.js"
   },
   "author": "Mahtias Muñoz",
   "license": "ISC",
@@ -12,5 +14,8 @@
     "axios": "^0.26.1",
     "colors": "^1.4.0",
     "inquirer": "^8.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

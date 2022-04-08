@@ -7,27 +7,11 @@ const menuInicial = [{
     message: '¿Qué deseas hacer?',
     choices: [{
             value: 1,
-            name: `${'1.'.green} Crear una tarea `
+            name: `${'1.'.green} Buscar ciudad `
         },
         {
             value: 2,
-            name: `${'2.'.green} Listar todas las tareas`
-        },
-        {
-            value: 3,
-            name: `${'3.'.green} Listar tareas pendientes`
-        },
-        {
-            value: 4,
-            name: `${'4.'.green} Listar tareas completadas`
-        },
-        {
-            value: 5,
-            name: `${'5.'.green} Marcar tarea como completada`
-        },
-        {
-            value: 6,
-            name: `${'6.'.green} Borrar tarea`
+            name: `${'2.'.green} Historial`
         },
         {
             value: 0,

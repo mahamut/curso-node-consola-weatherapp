@@ -1,10 +1,33 @@
-const { leerInput } = require('./helpers/inquirer')
+require('colors');
+const { inquirerMenu,
+        leerInput,  
+        inquirerPause
+        } = require('./helpers/inquirer');
 
-const main = async () => {
+console.clear();
+
+const main = async() => {
     
-    const texto = await leerInput('Si yo digo Hola, tú dices:');
+    let opt = '';
 
-    console.log(texto);
+    do {
+        
+        opt = await inquirerMenu();
+        console.log({ opt });
+
+        switch (opt){
+            case 1:
+                console.log('Escogiste la opción 1');
+                break;
+            case 2:
+                console.log('Escogiste la opción 2');
+                break;
+        }
+    
+        if (opt !==0) { await inquirerPause(); }
+
+    } while (opt !== 0);
+    
 }
 
 main();

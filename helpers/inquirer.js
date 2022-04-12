@@ -98,6 +98,37 @@ const seleccionarTarea = async( tareas = [] ) => {
     return id;
 }
 
+const listarLugares = async( lugares = [] ) => {
+
+    const choices = lugares.map( (lugar, i) => {
+
+        const idx = `${i + 1}.`.green;
+
+        return {
+            value: lugar.id,
+            name: `${idx} ${lugar.nombre}`,
+        }
+
+    });
+
+     choices.unshift({
+        value: 0,
+        name: '0. '.green + 'Cancelar'
+    })
+
+    const select = [
+        {
+            type: 'list',
+            name: 'id',
+            message: 'Seleccione 1 ciudad para buscar',
+            choices: choices,
+        }
+    ]
+
+    const { id } = await inquirer.prompt(select);
+    return id;
+}
+
 const confirmar = async (message) => {
 
     const question = [
@@ -145,6 +176,7 @@ module.exports = {
     inquirerPause,
     leerInput,
     seleccionarTarea,
+    listarLugares,
     confirmar,
     marcarTareaChecklist
 }
